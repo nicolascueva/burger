@@ -6,7 +6,7 @@ var orm = require("../config/orm.js");
 
 var burgerModule = {
     selectAll: function (cb) {
-        orm.selectAll("databaseInput", function (res) {
+        orm.selectAll("burgers", function (res) {
             cb(res);
         });
     },

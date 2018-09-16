@@ -5,8 +5,15 @@ var router = express.Router();
 // Import the model (cat.js) to use its database functions.
 var burgerModule = require("../models/burger.js");
 
-//router.get("/")...
-//res.render("index"...)
+router.get("/", function (req, res) {
+    burgerModule.selectAll(function (data) {
+        var hbsObject = {
+            burgers: data
+        };
+        console.log(hbsObject);
+        res.render("index", hbsObject);
+    });
+});
 
 
 
