@@ -10,8 +10,8 @@ var burgerModule = {
             cb(res);
         });
     },
-    insertOne: function (cb) {
-        orm.insertOne("databaseInput", function (res) {
+    insertOne: function (cols, vals, cb) {
+        orm.insertOne("burgers", cols, vals, function (res) {
             cb(res);
         });
     },
