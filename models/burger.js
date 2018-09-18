@@ -15,11 +15,11 @@ var burgerModule = {
             cb(res);
         });
     },
-    updateOne: function (cb) {
-        orm.updateOne("databaseInput", function (res) {
+    updateOne: function (objColVals, condition, cb) {
+        orm.updateOne("burgers", objColVals, condition, function (res) {
             cb(res);
         });
-    },
+    }
 };
 
 
